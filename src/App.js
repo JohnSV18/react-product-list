@@ -1,22 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { categoriesUnique, categorieSet, allCategories, categoriesWithCounts , namesAndCategories, test_namesAndCatergories, test_catergoriesWithCounts } from './data.js';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <p>{ categoriesUnique }</p> */}
+        { test_namesAndCatergories }
+        {/* {/* <p>{ categoriesUnique }</p> */}
+        {/* <p>{ allCategories }</p>  */}
+        
       </header>
     </div>
   );
