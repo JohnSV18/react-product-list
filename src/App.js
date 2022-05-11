@@ -1,15 +1,30 @@
 import './App.css';
-import { categoriesUnique, categorieSet, allCategories, categoriesWithCounts , namesAndCategories, test_namesAndCatergories, test_catergoriesWithCounts } from './data.js';
+import data, { categoriesUnique } from './data.js';
+import CategoryList from './Components/CategoryList';
+import ProductList from './Components/ProductList';
+import Header from './Components/Header';
+import { useState } from "react";
+
+
+
+
 function App() {
+  const [category, setCategory] = useState('Games');
+
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <p>{ categoriesUnique }</p> */}
-        { test_namesAndCatergories }
-        {/* {/* <p>{ categoriesUnique }</p> */}
-        {/* <p>{ allCategories }</p>  */}
-        
-      </header>
+        <Header 
+          title='Productify'
+          productCount={data.length}
+          categoryCount={categoriesUnique.length}/>
+        <CategoryList 
+          category={category}
+          onClick={ (newCategory) => {
+            setCategory(newCategory);
+          }} />
+        <ProductList
+          category={category} />
+    
     </div>
   );
 }

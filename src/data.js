@@ -25,6 +25,8 @@ const namesAndCategories = categoriesUnique.map(name => {
     )
 })
 
+namesAndCategories.push({ name: 'All', count: data.length })
+
 const test_namesAndCatergories = console.log(namesAndCategories)
 const test_catergoriesWithCounts = console.log(categoriesWithCounts)
 
